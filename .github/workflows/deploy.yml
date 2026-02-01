@@ -1,0 +1,25 @@
+name: Deploy Little Garden
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install & Build
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy to VPS
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc -i --delete"
+          SOURCE: "build/"           # Docusaurus build folder
+          REMOTE_HOST: "laughtale.co.za"
+          REMOTE_USER: "laughtale"
+          TARGET: "/var/www/little-garden" # Where it lives on your server
