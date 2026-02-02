@@ -2,7 +2,7 @@
 id: my-doc-id
 title: DevSecOps Intro
 description: My document description
-slug: /DevSecOps Intro
+slug: /my-doc
 ---
 
 ## Welcome to the world or DevSecOps
@@ -11,8 +11,8 @@ Before we can start you have to finish the tutorial so let's create links
 
 ## Links
 
-Let's see how to [Create a react page](/create-a-page).
-Let's see how to [Create a markdown page](/create-a-page.md).
+<!-- Let's see how to [Create a react page](/create-a-page). -->
+Let's see how to [Create a markdown page](../tutorial-basics/create-a-page.md).
 
 # Images
 
@@ -43,7 +43,7 @@ This action is dangerous
 > Admonition Test
 > Test
 
-Markdown text with [links](./hello.md)
+Markdown text with [links](../hello.md)
 
 MDX and React Components
 
