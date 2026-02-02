@@ -22,4 +22,5 @@ jobs:
           SOURCE: "build/"           # Docusaurus build folder
           REMOTE_HOST: "laughtale.co.za"
           REMOTE_USER: "laughtale"
+          REMOTE_PORT: "2222"
           TARGET: "/var/www/little-garden" # Where it lives on your server
